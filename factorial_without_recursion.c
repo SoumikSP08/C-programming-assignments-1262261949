@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* Function prototype */
+
 unsigned long long factorial_iterative(int n);
 
 int main()
@@ -27,7 +27,7 @@ int main()
     return 0;
 }
 
-/* Factorial without recursion (using a loop) */
+
 unsigned long long factorial_iterative(int n)
 {
     unsigned long long fact = 1;
