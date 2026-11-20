@@ -1,7 +1,3 @@
-/*
- * Lab Assignment 3 - Programming and Problem Solving
- * Menu-driven program in C to implement basic arithmetic operations.
- */
 
 #include <stdio.h>
 
