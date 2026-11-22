@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+/* Function prototypes */
+unsigned long long factorial_iterative(int n);
 unsigned long long factorial_recursive(int n);
 
 int main()
@@ -21,14 +23,29 @@ int main()
         return 1;
     }
 
-    printf("Factorial of number (with recursion) = %llu\n", factorial_recursive(num));
+    printf("Factorial of number (without recursion) = %llu\n", factorial_iterative(num));
+    printf("Factorial of number (with recursion)    = %llu\n", factorial_recursive(num));
 
     return 0;
 }
 
+/* Factorial without recursion (using a loop) */
+unsigned long long factorial_iterative(int n)
+{
+    unsigned long long fact = 1;
+    int i;
+
+    for (i = 1; i <= n; i++)
+    {
+        fact = fact * i;
+    }
+    return fact;
+}
+
+/* Factorial with recursion */
 unsigned long long factorial_recursive(int n)
 {
-    if (n == 0 || n == 1)                        /* base case */
+    if (n == 0 || n == 1)          /* base case */
         return 1;
     else
         return n * factorial_recursive(n - 1);   /* recursive case */
