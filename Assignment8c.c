@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-/* Call by reference: receives the addresses of the two speeds */
 void swap(int *a, int *b)
 {
     int temp;
@@ -21,7 +20,7 @@ int main()
     printf("Enter the second motor speed: ");
     scanf("%d", &motor2);
 
-    /* store the addresses of the motors in the pointers */
+
     p1 = &motor1;
     p2 = &motor2;
 
@@ -33,7 +32,6 @@ int main()
     printf("Address of first motor  = %p\n", (void *)p1);
     printf("Address of second motor = %p\n", (void *)p2);
 
-    /* pass the addresses to swap() */
     swap(p1, p2);
 
     printf("\nAfter Swapping:\n");
@@ -41,7 +39,6 @@ int main()
     printf("Address of first motor  = %p\n", (void *)p1);
     printf("Address of second motor = %p\n", (void *)p2);
 
-    /* verify the swap */
     if (motor1 == old2 && motor2 == old1)
         printf("\nVerification: Swap successful (addresses unchanged, values exchanged).\n");
     else
